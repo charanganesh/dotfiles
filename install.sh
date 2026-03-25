@@ -17,6 +17,8 @@ symlink() {
 
 # Symlinks
 symlink zshrc .zshrc
+symlink gitconfig .gitconfig
+mkdir -p "$HOME/.ssh" && symlink ssh_config .ssh/config
 
 # Install oh-my-zsh if missing
 if [ ! -d "$HOME/.oh-my-zsh" ]; then

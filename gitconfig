@@ -1,0 +1,13 @@
+[user]
+	name = Charan Ganesh
+	email = charan.ganesh1999@gmail.com
+[core]
+	excludesfile = /Users/charan.ganesh/.gitignore_global
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
+[mergetool "sourcetree"]
+	cmd = /Applications/Sourcetree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
+[commit]
+	template = /Users/charan.ganesh/.stCommitMsg
