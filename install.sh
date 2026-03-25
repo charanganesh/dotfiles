@@ -23,6 +23,12 @@ if ! command -v brew &>/dev/null; then
   eval "$(/opt/homebrew/bin/brew shellenv)" 2>/dev/null || eval "$(/usr/local/bin/brew shellenv)" 2>/dev/null
 fi
 
+# --- CLI tools ---
+if ! command -v tmux &>/dev/null; then
+  echo "Installing tmux..."
+  brew install tmux
+fi
+
 # --- Ghostty ---
 if [ ! -d "/Applications/Ghostty.app" ]; then
   echo "Installing Ghostty..."
