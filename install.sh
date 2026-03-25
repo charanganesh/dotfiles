@@ -37,7 +37,6 @@ echo "Linked Ghostty config"
 # --- Symlinks ---
 symlink zshrc .zshrc
 symlink gitconfig .gitconfig
-mkdir -p "$HOME/.ssh" && symlink ssh_config .ssh/config
 
 # --- oh-my-zsh ---
 if [ ! -d "$HOME/.oh-my-zsh" ]; then

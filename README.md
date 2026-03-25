@@ -6,7 +6,6 @@ My personal terminal configuration. Includes zsh setup with oh-my-zsh, autosugge
 
 - `.zshrc` — zsh config with oh-my-zsh, plugins, and prompt settings
 - `.gitconfig` — git user, editor, and tool config
-- `.ssh/config` — SSH host aliases
 - `install.sh` — sets up everything on a new machine automatically
 - `macos.sh` — macOS system preferences (run once manually)
 
@@ -21,7 +20,7 @@ cd ~/dotfiles
 That's it. The script will:
 1. Install oh-my-zsh if not already installed
 2. Install `zsh-autosuggestions` and `zsh-syntax-highlighting` plugins
-3. Symlink `~/.zshrc`, `~/.gitconfig`, and `~/.ssh/config` to this repo (backs up any existing files as `.bak`)
+3. Symlink `~/.zshrc` and `~/.gitconfig` to this repo (backs up any existing files as `.bak`)
 
 Optionally, apply macOS system preferences:
 ```bash
