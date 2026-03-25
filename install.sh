@@ -29,6 +29,32 @@ if ! command -v tmux &>/dev/null; then
   brew install tmux
 fi
 
+if ! command -v dippy &>/dev/null; then
+  echo "Installing dippy..."
+  brew tap ldayton/dippy
+  brew install dippy
+fi
+
+if ! command -v terminal-notifier &>/dev/null; then
+  echo "Installing terminal-notifier..."
+  brew install terminal-notifier
+fi
+
+if ! command -v recall &>/dev/null; then
+  echo "Installing recall..."
+  brew install zippoxer/tap/recall
+fi
+
+if ! command -v uv &>/dev/null; then
+  echo "Installing uv..."
+  brew install uv
+fi
+
+if ! command -v aichat &>/dev/null; then
+  echo "Installing claude-code-tools..."
+  uv tool install claude-code-tools
+fi
+
 # --- Ghostty ---
 if [ ! -d "/Applications/Ghostty.app" ]; then
   echo "Installing Ghostty..."
@@ -43,6 +69,15 @@ echo "Linked Ghostty config"
 # --- Symlinks ---
 symlink zshrc .zshrc
 symlink gitconfig .gitconfig
+
+# --- Claude Code ---
+mkdir -p "$HOME/.claude/ccnotify"
+symlink claude/settings.json .claude/settings.json
+symlink claude/ccnotify/ccnotify.py .claude/ccnotify/ccnotify.py
+chmod +x "$HOME/.claude/ccnotify/ccnotify.py"
+
+# --- Global agent skills ---
+symlink agents .agents
 
 # --- oh-my-zsh ---
 if [ ! -d "$HOME/.oh-my-zsh" ]; then
