@@ -31,16 +31,6 @@
         "gitCommitSha": "f6dbf44cd5f5a90f8fd2608c13f3d7bcf15bfe6f"
       }
     ],
-    "slack@claude-plugins-official": [
-      {
-        "scope": "user",
-        "installPath": "/Users/charan.ganesh/.claude/plugins/cache/claude-plugins-official/slack/1.0.0",
-        "version": "1.0.0",
-        "installedAt": "2026-03-26T13:40:35.384Z",
-        "lastUpdated": "2026-03-26T13:40:35.384Z",
-        "gitCommitSha": "7b9458950d38bb01ddb48b669f9fa89bcdfd98b8"
-      }
-    ],
     "explanatory-output-style@claude-plugins-official": [
       {
         "scope": "user",
@@ -75,6 +65,33 @@
         "version": "1.0.0",
         "installedAt": "2026-03-27T11:08:39.184Z",
         "lastUpdated": "2026-03-27T11:08:39.184Z"
+      }
+    ],
+    "claude-md-management@claude-plugins-official": [
+      {
+        "scope": "user",
+        "installPath": "/Users/charan.ganesh/.claude/plugins/cache/claude-plugins-official/claude-md-management/1.0.0",
+        "version": "1.0.0",
+        "installedAt": "2026-03-27T11:14:37.935Z",
+        "lastUpdated": "2026-03-27T11:14:37.935Z"
+      }
+    ],
+    "github@claude-plugins-official": [
+      {
+        "scope": "user",
+        "installPath": "/Users/charan.ganesh/.claude/plugins/cache/claude-plugins-official/github/unknown",
+        "version": "unknown",
+        "installedAt": "2026-03-27T11:15:05.181Z",
+        "lastUpdated": "2026-03-27T11:15:05.181Z"
+      }
+    ],
+    "security-guidance@claude-plugins-official": [
+      {
+        "scope": "user",
+        "installPath": "/Users/charan.ganesh/.claude/plugins/cache/claude-plugins-official/security-guidance/unknown",
+        "version": "unknown",
+        "installedAt": "2026-03-27T11:18:31.325Z",
+        "lastUpdated": "2026-03-27T11:18:31.325Z"
       }
     ]
   }
