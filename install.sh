@@ -72,9 +72,12 @@ symlink gitconfig .gitconfig
 
 # --- Claude Code ---
 mkdir -p "$HOME/.claude/ccnotify"
+mkdir -p "$HOME/.claude/plugins"
 symlink claude/settings.json .claude/settings.json
 symlink claude/ccnotify/ccnotify.py .claude/ccnotify/ccnotify.py
 chmod +x "$HOME/.claude/ccnotify/ccnotify.py"
+symlink claude/plugins/installed_plugins.json .claude/plugins/installed_plugins.json
+symlink claude/plugins/known_marketplaces.json .claude/plugins/known_marketplaces.json
 
 # --- Global agent skills ---
 symlink agents .agents
