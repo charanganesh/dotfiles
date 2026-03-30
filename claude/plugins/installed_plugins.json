@@ -34,10 +34,10 @@
     "explanatory-output-style@claude-plugins-official": [
       {
         "scope": "user",
-        "installPath": "/Users/charan.ganesh/.claude/plugins/cache/claude-plugins-official/explanatory-output-style/unknown",
-        "version": "unknown",
+        "installPath": "/Users/charan.ganesh/.claude/plugins/cache/claude-plugins-official/explanatory-output-style/1.0.0",
+        "version": "1.0.0",
         "installedAt": "2026-03-27T10:59:41.529Z",
-        "lastUpdated": "2026-03-27T10:59:41.529Z"
+        "lastUpdated": "2026-03-30T08:50:53.720Z"
       }
     ],
     "code-simplifier@claude-plugins-official": [
@@ -92,6 +92,26 @@
         "version": "unknown",
         "installedAt": "2026-03-27T11:18:31.325Z",
         "lastUpdated": "2026-03-27T11:18:31.325Z"
+      }
+    ],
+    "figma@claude-plugins-official": [
+      {
+        "scope": "user",
+        "installPath": "/Users/charan.ganesh/.claude/plugins/cache/claude-plugins-official/figma/2.0.2",
+        "version": "2.0.2",
+        "installedAt": "2026-03-28T06:02:15.925Z",
+        "lastUpdated": "2026-03-28T06:02:15.925Z",
+        "gitCommitSha": "512f1c770037f8bb4a86748df54e219716d64414"
+      }
+    ],
+    "claude-hud@claude-hud": [
+      {
+        "scope": "user",
+        "installPath": "/Users/charan.ganesh/.claude/plugins/cache/claude-hud/claude-hud/0.0.11",
+        "version": "0.0.11",
+        "installedAt": "2026-03-30T08:50:00.302Z",
+        "lastUpdated": "2026-03-30T08:50:00.302Z",
+        "gitCommitSha": "30e1dfe46ad7b9a39ca2a4df7c735aaa33a90fd9"
       }
     ]
   }

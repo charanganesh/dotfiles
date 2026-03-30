@@ -3,6 +3,7 @@
     "commit": "",
     "pr": ""
   },
+  "model": "opus",
   "hooks": {
     "PreToolUse": [
       {
@@ -55,7 +56,17 @@
     "typescript-lsp@claude-plugins-official": true,
     "security-guidance@claude-plugins-official": true,
     "claude-md-management@claude-plugins-official": true,
-    "github@claude-plugins-official": true
+    "github@claude-plugins-official": true,
+    "figma@claude-plugins-official": true,
+    "claude-hud@claude-hud": true
+  },
+  "extraKnownMarketplaces": {
+    "claude-hud": {
+      "source": {
+        "source": "github",
+        "repo": "jarrodwatts/claude-hud"
+      }
+    }
   },
   "effortLevel": "medium",
   "voiceEnabled": true

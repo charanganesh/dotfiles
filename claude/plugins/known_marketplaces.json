@@ -13,6 +13,14 @@
       "repo": "anthropics/claude-code"
     },
     "installLocation": "/Users/charan.ganesh/.claude/plugins/marketplaces/claude-code-plugins",
-    "lastUpdated": "2026-03-27T11:18:45.142Z"
+    "lastUpdated": "2026-03-30T08:52:13.482Z"
+  },
+  "claude-hud": {
+    "source": {
+      "source": "github",
+      "repo": "jarrodwatts/claude-hud"
+    },
+    "installLocation": "/Users/charan.ganesh/.claude/plugins/marketplaces/claude-hud",
+    "lastUpdated": "2026-03-30T08:49:50.142Z"
   }
 }
