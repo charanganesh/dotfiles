@@ -21,7 +21,7 @@ defaults write com.apple.finder FXEnableExtensionChangeWarning -bool false # no 
 defaults write NSGlobalDomain AppleShowAllExtensions -bool true            # show all file extensions
 
 # --- Keyboard ---
-defaults write NSGlobalDomain KeyRepeat -int 1                              # fast key repeat
+defaults write NSGlobalDomain KeyRepeat -int 2                              # key repeat rate
 defaults write NSGlobalDomain InitialKeyRepeat -int 15                      # delay before repeat starts
 defaults write NSGlobalDomain ApplePressAndHoldEnabled -bool false          # enable key repeat in all apps (disables accent picker)
 defaults write NSGlobalDomain NSAutomaticSpellingCorrectionEnabled -bool false
