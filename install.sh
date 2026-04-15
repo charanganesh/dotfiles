@@ -50,6 +50,26 @@ if ! command -v uv &>/dev/null; then
   brew install uv
 fi
 
+if ! command -v eza &>/dev/null; then
+  echo "Installing eza..."
+  brew install eza
+fi
+
+if ! command -v zoxide &>/dev/null; then
+  echo "Installing zoxide..."
+  brew install zoxide
+fi
+
+if ! command -v rg &>/dev/null; then
+  echo "Installing ripgrep..."
+  brew install ripgrep
+fi
+
+if ! command -v jq &>/dev/null; then
+  echo "Installing jq..."
+  brew install jq
+fi
+
 if ! command -v aichat &>/dev/null; then
   echo "Installing claude-code-tools..."
   uv tool install claude-code-tools

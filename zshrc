@@ -131,6 +131,17 @@ alias clearderived='rm -rf ~/Library/Developer/Xcode/DerivedData && echo "Derive
 alias ios='cd ~/Documents/ios-mercury/Source'
 alias tv='cd ~/Documents/apple-tv/CricbuzzTV'
 
+# eza (modern ls)
+if command -v eza &>/dev/null; then
+  alias ls='eza --group-directories-first --hyperlink'
+  alias ll='ls --long --git --time-style=long-iso --no-user'
+  alias la='ls --all'
+  alias lt='ll --tree --level=2 --git-ignore --ignore-glob=.git'
+fi
+
 # Antigravity
 export PATH="/Users/charan.ganesh/.antigravity/antigravity/bin:$PATH"
 export PATH="$HOME/.local/bin:$PATH"
+
+# zoxide (smart cd — use 'z <dir>' to jump)
+(( $+commands[zoxide] )) && eval "$(zoxide init zsh)"

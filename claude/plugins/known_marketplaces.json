@@ -5,7 +5,7 @@
       "repo": "anthropics/claude-plugins-official"
     },
     "installLocation": "/Users/charan.ganesh/.claude/plugins/marketplaces/claude-plugins-official",
-    "lastUpdated": "2026-03-25T06:34:21.796Z"
+    "lastUpdated": "2026-04-15T07:07:26.870Z"
   },
   "claude-code-plugins": {
     "source": {
@@ -13,7 +13,7 @@
       "repo": "anthropics/claude-code"
     },
     "installLocation": "/Users/charan.ganesh/.claude/plugins/marketplaces/claude-code-plugins",
-    "lastUpdated": "2026-03-30T08:56:09.702Z"
+    "lastUpdated": "2026-04-15T07:07:26.046Z"
   },
   "claude-hud": {
     "source": {
@@ -22,5 +22,13 @@
     },
     "installLocation": "/Users/charan.ganesh/.claude/plugins/marketplaces/claude-hud",
     "lastUpdated": "2026-03-30T08:49:50.142Z"
+  },
+  "swiftui-expert-skill": {
+    "source": {
+      "source": "github",
+      "repo": "AvdLee/SwiftUI-Agent-Skill"
+    },
+    "installLocation": "/Users/charan.ganesh/.claude/plugins/marketplaces/swiftui-expert-skill",
+    "lastUpdated": "2026-04-02T10:03:21.286Z"
   }
 }

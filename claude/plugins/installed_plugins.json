@@ -97,10 +97,10 @@
     "figma@claude-plugins-official": [
       {
         "scope": "user",
-        "installPath": "/Users/charan.ganesh/.claude/plugins/cache/claude-plugins-official/figma/2.0.2",
-        "version": "2.0.2",
+        "installPath": "/Users/charan.ganesh/.claude/plugins/cache/claude-plugins-official/figma/2.1.7",
+        "version": "2.1.7",
         "installedAt": "2026-03-28T06:02:15.925Z",
-        "lastUpdated": "2026-03-28T06:02:15.925Z",
+        "lastUpdated": "2026-04-11T17:26:29.799Z",
         "gitCommitSha": "512f1c770037f8bb4a86748df54e219716d64414"
       }
     ],
@@ -112,6 +112,25 @@
         "installedAt": "2026-03-30T08:50:00.302Z",
         "lastUpdated": "2026-03-30T08:50:00.302Z",
         "gitCommitSha": "30e1dfe46ad7b9a39ca2a4df7c735aaa33a90fd9"
+      }
+    ],
+    "claude-code-setup@claude-plugins-official": [
+      {
+        "scope": "user",
+        "installPath": "/Users/charan.ganesh/.claude/plugins/cache/claude-plugins-official/claude-code-setup/1.0.0",
+        "version": "1.0.0",
+        "installedAt": "2026-03-31T07:35:26.022Z",
+        "lastUpdated": "2026-03-31T07:35:26.022Z"
+      }
+    ],
+    "swiftui-expert@swiftui-expert-skill": [
+      {
+        "scope": "user",
+        "installPath": "/Users/charan.ganesh/.claude/plugins/cache/swiftui-expert-skill/swiftui-expert/2.4.3",
+        "version": "2.4.3",
+        "installedAt": "2026-04-02T10:03:25.945Z",
+        "lastUpdated": "2026-04-02T10:03:25.945Z",
+        "gitCommitSha": "9c2b1747772266325d91ac489d50ec34cc78823c"
       }
     ]
   }
