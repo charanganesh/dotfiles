@@ -1,6 +1,13 @@
+# Per-machine default identity (untracked). install.sh creates a template.
+# On the work Mac set this to the work email; on personal, the gmail.
+[include]
+	path = ~/.gitconfig-local
 [user]
 	name = Charan Ganesh
-	email = charan.ganesh1999@gmail.com
+# Any repo whose remote is github.com/charanganesh/* uses the personal
+# identity, regardless of where it lives on disk or the machine default above.
+[includeIf "hasconfig:remote.*.url:**charanganesh/**"]
+	path = ~/.gitconfig-personal
 [core]
 	excludesfile = /Users/charan.ganesh/.gitignore_global
 [difftool "sourcetree"]

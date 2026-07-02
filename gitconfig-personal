@@ -1,0 +1,5 @@
+# Personal identity — applied automatically to any repo whose remote is
+# github.com/charanganesh/* (via the includeIf rule in gitconfig).
+# Symlinked to ~/.gitconfig-personal by install.sh.
+[user]
+	email = charan.ganesh1999@gmail.com

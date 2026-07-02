@@ -89,6 +89,21 @@ echo "Linked Ghostty config"
 # --- Symlinks ---
 symlink zshrc .zshrc
 symlink gitconfig .gitconfig
+symlink gitconfig-personal .gitconfig-personal
+
+# Per-machine default git identity (NOT tracked — keeps work email out of the
+# repo, and avoids `git config --global` writing back through the symlinked
+# ~/.gitconfig). Seed a template once; leave existing files untouched.
+if [ ! -f "$HOME/.gitconfig-local" ]; then
+  cat > "$HOME/.gitconfig-local" <<'EOF'
+# Default git identity for THIS machine. Set the email for the account you use
+# most here (e.g. work email on a work Mac). Repos under github.com/charanganesh/*
+# override this with your personal email automatically.
+[user]
+	email =
+EOF
+  echo "Created ~/.gitconfig-local — set your default email for this machine there"
+fi
 
 # --- Claude Code ---
 # Note: plugins are NOT symlinked. Claude Code manages its own plugin state
