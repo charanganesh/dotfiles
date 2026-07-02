@@ -7,7 +7,7 @@ Personal dotfiles — zsh, git, Ghostty, and Claude Code config.
 - `zshrc` — zsh config with oh-my-zsh, autosuggestions, syntax highlighting, and aliases
 - `gitconfig` — git user, editor, and tool config
 - `ghostty_config` — Ghostty terminal config (theme, fonts)
-- `claude/` — Claude Code config: settings, hooks, plugins, and ccnotify
+- `claude/` — Claude Code config: settings, hooks, and ccnotify
 - `agents/` — Custom Claude Code agent definitions
 - `install.sh` — sets up everything on a new machine automatically
 - `macos.sh` — macOS system preferences (run once manually)
@@ -35,6 +35,8 @@ Optionally, apply macOS system preferences:
 `claude/settings.json` contains hooks, enabled plugins, and the statusLine config for [claude-hud](https://github.com/jarrodwatts/claude-hud). The settings file is symlinked from `~/.claude/settings.json`.
 
 `claude/ccnotify/ccnotify.py` is a hook script that sends macOS notifications when Claude finishes a task.
+
+Plugin state (`installed_plugins.json`, `known_marketplaces.json`) is **not** tracked — Claude Code rewrites it on every update with machine-specific paths. Reinstall plugins on a new machine via `/plugin` in Claude Code.
 
 ## Adding more dotfiles
 

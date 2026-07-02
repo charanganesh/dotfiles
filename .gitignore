@@ -1,0 +1,7 @@
+.DS_Store
+
+# Claude Code plugin runtime state — rewritten on every plugin update with
+# version bumps, timestamps, and username-baked absolute installPaths. Not
+# portable and not worth tracking; plugins reinstall from their marketplaces.
+claude/plugins/installed_plugins.json
+claude/plugins/known_marketplaces.json
