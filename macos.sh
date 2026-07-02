@@ -11,7 +11,7 @@ defaults write com.apple.dock autohide -bool true           # auto-hide dock
 defaults write com.apple.dock tilesize -int 67              # icon size
 defaults write com.apple.dock show-recents -bool false      # hide recent apps
 defaults write com.apple.dock minimize-to-application -bool true  # minimize into app icon
-defaults write com.apple.dock magnification -bool true            # dock magnification on
+defaults write com.apple.dock magnification -bool false           # dock magnification off
 defaults write com.apple.dock expose-group-apps -bool false       # Mission Control: don't group windows by app
 defaults write com.apple.dock wvous-br-corner -int 1              # bottom-right hot corner disabled (no Quick Note)
 defaults write com.apple.dock wvous-br-modifier -int 0            # no modifier key
