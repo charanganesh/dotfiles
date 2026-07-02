@@ -30,7 +30,19 @@ defaults write NSGlobalDomain NSAutomaticDashSubstitutionEnabled -bool false
 defaults write NSGlobalDomain NSAutomaticQuoteSubstitutionEnabled -bool false
 
 # --- Trackpad ---
+# Written to both domains: AppleMultitouchTrackpad (built-in) and the
+# AppleBluetoothMultitouch.trackpad twin (Magic Trackpad). macOS reads whichever
+# matches the connected device, so keep them in sync.
 defaults write NSGlobalDomain com.apple.swipescrolldirection -bool false  # natural scroll off
+
+for domain in com.apple.AppleMultitouchTrackpad com.apple.driver.AppleBluetoothMultitouch.trackpad; do
+  defaults write "$domain" Clicking -bool false                       # tap to click off
+  defaults write "$domain" Dragging -bool false                       # tap-drag off
+  defaults write "$domain" TrackpadThreeFingerDrag -bool false        # three-finger drag off
+  defaults write "$domain" TrackpadThreeFingerTapGesture -int 0       # three-finger tap (lookup) off
+  defaults write "$domain" TrackpadRightClick -bool true              # two-finger secondary click on
+  defaults write "$domain" TrackpadCornerSecondaryClick -int 0        # no corner right-click
+done
 
 # --- Screenshots ---
 defaults write com.apple.screencapture type -string "png"
