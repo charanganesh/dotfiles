@@ -7,11 +7,30 @@ https://github.com/dazuiba/CCNotify
 import os
 import sys
 import json
+import shutil
 import sqlite3
 import subprocess
 import logging
 from logging.handlers import TimedRotatingFileHandler
 from datetime import datetime
+
+
+def resolve_notifier():
+    """Return an absolute path to a working terminal-notifier binary.
+
+    Bare-name lookup is avoided on purpose: rbenv prepends its shim dir to
+    PATH, and its gem ships an Intel-only binary that fails with EBADARCH once
+    Rosetta is absent (e.g. after a macOS update). Prefer the native Homebrew
+    build, then common install locations, and only fall back to PATH."""
+    candidates = [
+        "/opt/homebrew/bin/terminal-notifier",  # Apple Silicon Homebrew (native arm64)
+        "/usr/local/bin/terminal-notifier",     # Intel Homebrew
+    ]
+    for path in candidates:
+        if os.path.exists(path):
+            return path
+    # Last resort: whatever is on PATH (may be the broken rbenv shim).
+    return shutil.which("terminal-notifier") or "terminal-notifier"
 
 
 class ClaudePromptTracker:
@@ -177,11 +196,19 @@ class ClaudePromptTracker:
             )
         elif "permission" in message_lower:
             subtitle = "Permission Required"
+            # Owned by Claude Code's built-in (Ghostty-rendered) notification,
+            # which is richer for permission prompts (shows the task title).
+            # Suppress the terminal-notifier duplicate; ccnotify only owns the
+            # job-complete notification via the Stop handler.
+            should_notify = False
         elif "approval" in message_lower or "choose an option" in message_lower:
             subtitle = "Action Required"
+            should_notify = False  # Same split as permission above (Ghostty owns it).
         else:
-            # For other notifications, use a generic subtitle
+            # Any other Notification-event type is already surfaced by Claude
+            # Code's built-in channel; don't double-notify via terminal-notifier.
             subtitle = "Notification"
+            should_notify = False
 
         # Update database for waiting notifications
         if should_update_db:
@@ -278,13 +305,18 @@ class ClaudePromptTracker:
 
         try:
             cmd = [
-                "terminal-notifier",
+                resolve_notifier(),
                 "-sound",
                 "default",
                 "-title",
                 title,
+                # -message is REQUIRED by terminal-notifier; without it the tool
+                # exits 0 but posts nothing. Carry the meaningful text here so it
+                # renders as the notification body; timestamp goes to -subtitle.
+                "-message",
+                subtitle,
                 "-subtitle",
-                f"{subtitle}\n{current_time}",
+                current_time,
             ]
 
             if cwd:
