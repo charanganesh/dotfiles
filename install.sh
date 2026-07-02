@@ -106,9 +106,15 @@ EOF
 fi
 
 # --- Claude Code ---
-# Note: plugins are NOT symlinked. Claude Code manages its own plugin state
+# Install the CLI if missing (self-updating native binary). Config is symlinked
+# below; plugins are NOT symlinked — Claude Code manages its own plugin state
 # (installed_plugins.json / known_marketplaces.json) locally and rewrites it on
 # every update. Reinstall plugins on the new machine via `/plugin` in Claude Code.
+if ! command -v claude &>/dev/null; then
+  echo "Installing Claude Code..."
+  curl -fsSL https://claude.ai/install.sh | bash
+fi
+
 mkdir -p "$HOME/.claude/ccnotify"
 symlink claude/settings.json .claude/settings.json
 symlink claude/ccnotify/ccnotify.py .claude/ccnotify/ccnotify.py
