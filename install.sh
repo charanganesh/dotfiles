@@ -124,9 +124,11 @@ chmod +x "$HOME/.claude/ccnotify/ccnotify.py"
 symlink agents .agents
 
 # --- oh-my-zsh ---
+# --keep-zshrc is critical: without it the installer OVERWRITES ~/.zshrc with its
+# own template, clobbering the symlink created above (breaks aliases + plugins).
 if [ ! -d "$HOME/.oh-my-zsh" ]; then
   echo "Installing oh-my-zsh..."
-  sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
+  sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended --keep-zshrc
 fi
 
 # --- zsh plugins ---
